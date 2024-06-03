@@ -4,6 +4,7 @@ import 'package:flutter_ninjas_2024/slide/agenda/slide.dart';
 import 'package:flutter_ninjas_2024/slide/resources/slide.dart';
 import 'package:flutter_ninjas_2024/slide/self_intro/slide.dart';
 import 'package:flutter_ninjas_2024/slide/title/slide.dart';
+import 'package:flutter_ninjas_2024/slide/widgettree_image/slide.dart';
 
 void main() {
   runApp(const MainApp());
@@ -39,6 +40,7 @@ class MainApp extends StatelessWidget {
         const ResourcesSlide(),
         AgendaSlide(null),
         AgendaSlide(0),
+        const WidgettreeImageSlide(),
         AgendaSlide(1),
         AgendaSlide(2),
       ],
