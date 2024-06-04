@@ -33,6 +33,11 @@ class WidgettreeImageRight extends StatelessWidget {
                   const Text('- Rebuild is managed inside the tree'),
                   const Text('- Layouts are calculated using the tree'),
                 ].intersperse(const Gap(32)),
+                const Gap(64),
+                const Text(
+                  'Everything happens on the widget tree'
+                  ' using the relationships between ancestors and descendants.',
+                ),
               ],
             ),
           ),

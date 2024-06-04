@@ -19,6 +19,8 @@ class SelfIntroPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             const Gap(32),
+            ListItem.text('Tsuyoshi Chujo : Chooyan'),
+            const Gap(32),
             ListItem.text('Freelance Flutter Developer in Japan'),
             const Gap(32),
             ListItem.rich(const [
