@@ -123,10 +123,9 @@ packages:
   graph_your_widget_tree:
     dependency: "direct main"
     description:
-      name: graph_your_widget_tree
-      sha256: bf7be571ba378f01ba6f7ab3805e4f2609e8ec9b68826bacfbfcd3f142aef270
-      url: "https://pub.dev"
-    source: hosted
+      path: "../../flutter_packages/graph_your_widget_tree"
+      relative: true
+    source: path
     version: "0.1.1"
   highlight:
     dependency: transitive
