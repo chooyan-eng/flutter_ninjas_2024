@@ -5,6 +5,7 @@ import 'package:flutter_ninjas_2024/slide/element_does/slide.dart';
 import 'package:flutter_ninjas_2024/slide/element_intro/slide.dart';
 import 'package:flutter_ninjas_2024/slide/element_widget/slide.dart';
 import 'package:flutter_ninjas_2024/slide/inside_widget/slide.dart';
+import 'package:flutter_ninjas_2024/slide/of_example/slide.dart';
 import 'package:flutter_ninjas_2024/slide/resources/slide.dart';
 import 'package:flutter_ninjas_2024/slide/self_intro/slide.dart';
 import 'package:flutter_ninjas_2024/slide/title/slide.dart';
@@ -18,6 +19,9 @@ enum WidgetAppearance {
   focused,
   noConnection,
   focusedNoConnection,
+  nodeFocused,
+  errorFocusedNode,
+  errorNode,
 }
 
 void main() async {
@@ -39,18 +43,43 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GraphTheme(
       defaultTheme: const GraphThemeData(),
-      extraThemes: const {
-        WidgetAppearance.focused: GraphThemeData(
+      extraThemes: {
+        WidgetAppearance.focused: const GraphThemeData(
           backgroundColor: Colors.orange,
-          textStyle: TextStyle(color: Colors.white),
+          textStyle: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+          ),
         ),
-        WidgetAppearance.noConnection: GraphThemeData(
+        WidgetAppearance.noConnection: const GraphThemeData(
           lineColor: Colors.transparent,
         ),
-        WidgetAppearance.focusedNoConnection: GraphThemeData(
+        WidgetAppearance.focusedNoConnection: const GraphThemeData(
           backgroundColor: Colors.purple,
-          textStyle: TextStyle(color: Colors.white),
+          textStyle: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+          ),
           lineColor: Colors.transparent,
+        ),
+        WidgetAppearance.nodeFocused: GraphThemeData(
+          backgroundColor: Colors.orange[100],
+          lineColor: Colors.orange,
+          lineWidth: 4,
+        ),
+        WidgetAppearance.errorFocusedNode: const GraphThemeData(
+          backgroundColor: Colors.red,
+          textStyle: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+          ),
+          lineColor: Colors.red,
+          lineWidth: 4,
+        ),
+        WidgetAppearance.errorNode: GraphThemeData(
+          backgroundColor: Colors.red[100],
+          lineColor: Colors.red,
+          lineWidth: 4,
         ),
       },
       child: FlutterDeckApp(
@@ -83,6 +112,7 @@ class MainApp extends StatelessWidget {
           const ElementDoesSlide(),
           const ElementIntroSlide(),
           const WidgetElementSlide(),
+          const OfExampleSlide(),
           AgendaSlide(1),
           AgendaSlide(2),
         ],
