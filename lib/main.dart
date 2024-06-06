@@ -4,6 +4,8 @@ import 'package:flutter_ninjas_2024/slide/agenda/slide.dart';
 import 'package:flutter_ninjas_2024/slide/element_does/slide.dart';
 import 'package:flutter_ninjas_2024/slide/element_intro/slide.dart';
 import 'package:flutter_ninjas_2024/slide/element_widget/slide.dart';
+import 'package:flutter_ninjas_2024/slide/example_navigator/slide.dart';
+import 'package:flutter_ninjas_2024/slide/example_theme/slide.dart';
 import 'package:flutter_ninjas_2024/slide/inside_widget/slide.dart';
 import 'package:flutter_ninjas_2024/slide/of_example/slide.dart';
 import 'package:flutter_ninjas_2024/slide/resources/slide.dart';
@@ -17,6 +19,7 @@ late final Highlighter highlighter;
 
 enum WidgetAppearance {
   focused,
+  focusedAccent,
   noConnection,
   focusedNoConnection,
   nodeFocused,
@@ -46,6 +49,13 @@ class MainApp extends StatelessWidget {
       extraThemes: {
         WidgetAppearance.focused: const GraphThemeData(
           backgroundColor: Colors.orange,
+          textStyle: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        WidgetAppearance.focusedAccent: const GraphThemeData(
+          backgroundColor: Colors.blue,
           textStyle: TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.bold,
@@ -114,6 +124,8 @@ class MainApp extends StatelessWidget {
           const WidgetElementSlide(),
           const OfExampleSlide(),
           AgendaSlide(1),
+          const ExampleNavigatorSlide(),
+          const ExampleThemeSlide(),
           AgendaSlide(2),
         ],
       ),

@@ -1,18 +1,19 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_deck/flutter_deck.dart';
+import 'package:flutter_ninjas_2024/slide/example_theme/page.dart';
 
-class ElementIntroSlide extends FlutterDeckSlideWidget {
-  const ElementIntroSlide()
+class ExampleThemeSlide extends FlutterDeckSlideWidget {
+  const ExampleThemeSlide()
       : super(
           configuration: const FlutterDeckSlideConfiguration(
-            route: '/element-intro',
+            route: '/example-theme',
           ),
         );
 
   @override
   FlutterDeckSlide build(BuildContext context) {
     return FlutterDeckSlide.blank(
-      builder: (context) => const Placeholder(),
+      builder: (context) => const ExampleThemePage(),
     );
   }
 }
