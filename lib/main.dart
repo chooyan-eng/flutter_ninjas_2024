@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_deck/flutter_deck.dart';
 import 'package:flutter_ninjas_2024/component/clock_theme.dart';
 import 'package:flutter_ninjas_2024/component/tiny_clock.dart';
+import 'package:flutter_ninjas_2024/slide/accessing_ancestor/slide.dart';
 import 'package:flutter_ninjas_2024/slide/agenda/slide.dart';
 import 'package:flutter_ninjas_2024/slide/and_more/slide.dart';
+import 'package:flutter_ninjas_2024/slide/clock_theming/slide.dart';
+import 'package:flutter_ninjas_2024/slide/conclusion/slide.dart';
 import 'package:flutter_ninjas_2024/slide/element_does/slide.dart';
 import 'package:flutter_ninjas_2024/slide/element_intro/slide.dart';
 import 'package:flutter_ninjas_2024/slide/element_widget/slide.dart';
@@ -15,8 +18,13 @@ import 'package:flutter_ninjas_2024/slide/inside_widget/slide.dart';
 import 'package:flutter_ninjas_2024/slide/of_example/slide.dart';
 import 'package:flutter_ninjas_2024/slide/resources/slide.dart';
 import 'package:flutter_ninjas_2024/slide/self_intro/slide.dart';
+import 'package:flutter_ninjas_2024/slide/thank_you/slide.dart';
 import 'package:flutter_ninjas_2024/slide/tiny_clock/slide.dart';
 import 'package:flutter_ninjas_2024/slide/title/slide.dart';
+import 'package:flutter_ninjas_2024/slide/using_argument/slide.dart';
+import 'package:flutter_ninjas_2024/slide/using_context/slide.dart';
+import 'package:flutter_ninjas_2024/slide/using_package/slide.dart';
+import 'package:flutter_ninjas_2024/slide/using_theme_pattern/slide.dart';
 import 'package:flutter_ninjas_2024/slide/widgettree_image/slide.dart';
 import 'package:graph_your_widget_tree/graph_your_widget_tree.dart';
 import 'package:syntax_highlight/syntax_highlight.dart';
@@ -59,7 +67,7 @@ class MainApp extends StatefulWidget {
 class MainAppState extends State<MainApp> {
   var _left = 32.0;
   var _top = 32.0;
-  var _clockTheme = ClockThemeData();
+  var _clockTheme = const ClockThemeData();
 
   void updateTheme(ClockThemeData theme) {
     setState(() {
@@ -163,6 +171,14 @@ class MainAppState extends State<MainApp> {
                   const AndMoreSlide(),
                   AgendaSlide(2),
                   const TinyClockSlide(),
+                  const ClockThemingSlide(),
+                  const UsingArgumentSlide(),
+                  const UsingThemePatternSlide(),
+                  const AccessingAncestorSlide(),
+                  const UsingPackageSlide(),
+                  const UsingContextSlide(),
+                  const ConclusionSlide(),
+                  const ThankYouSlide(),
                 ],
               ),
             ),

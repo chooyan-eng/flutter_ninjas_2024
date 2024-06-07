@@ -6,7 +6,7 @@ class ClockThemeData {
   final Color borderColor;
   final Color buttonColor;
 
-  ClockThemeData({
+  const ClockThemeData({
     this.backgroundColor = Colors.white,
     this.textColor = Colors.black,
     this.borderColor = Colors.brown,
@@ -25,7 +25,7 @@ class ClockTheme extends InheritedWidget {
 
   static ClockThemeData of(BuildContext context) {
     final theme = context.dependOnInheritedWidgetOfExactType<ClockTheme>();
-    return theme?.themeData ?? ClockThemeData();
+    return theme?.themeData ?? const ClockThemeData();
   }
 
   @override
