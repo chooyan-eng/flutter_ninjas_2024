@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_deck/flutter_deck.dart';
 import 'package:flutter_ninjas_2024/slide/agenda/slide.dart';
+import 'package:flutter_ninjas_2024/slide/and_more/slide.dart';
 import 'package:flutter_ninjas_2024/slide/element_does/slide.dart';
 import 'package:flutter_ninjas_2024/slide/element_intro/slide.dart';
 import 'package:flutter_ninjas_2024/slide/element_widget/slide.dart';
 import 'package:flutter_ninjas_2024/slide/example_navigator/slide.dart';
+import 'package:flutter_ninjas_2024/slide/example_popscope/slide.dart';
 import 'package:flutter_ninjas_2024/slide/example_theme/slide.dart';
+import 'package:flutter_ninjas_2024/slide/inherited_widget/slide.dart';
 import 'package:flutter_ninjas_2024/slide/inside_widget/slide.dart';
 import 'package:flutter_ninjas_2024/slide/of_example/slide.dart';
 import 'package:flutter_ninjas_2024/slide/resources/slide.dart';
@@ -126,6 +129,9 @@ class MainApp extends StatelessWidget {
           AgendaSlide(1),
           const ExampleNavigatorSlide(),
           const ExampleThemeSlide(),
+          const InheritedWidgetSlide(),
+          const PopscopeSlide(),
+          const AndMoreSlide(),
           AgendaSlide(2),
         ],
       ),

@@ -48,9 +48,9 @@ class ExampleThemePage extends StatelessWidget {
                   const Gap(32),
                   ListItem.rich(
                     const [
-                      'BuildContext has',
-                      ' dependOnInheritedWidgetOfExactType<T>() method',
-                      ' that returns',
+                      '',
+                      'dependOnInheritedWidgetOfExactType<T>() method',
+                      ' returns',
                       ' InheritedWidget of type T',
                       ' from ancestors.',
                     ],
@@ -113,10 +113,10 @@ class _ThemeGraphState extends State<_ThemeGraph> {
 
     return Graph(
       root: WidgetEntry.single(
-        name: ' ',
+        type: WidgetAppearance.focusedAccent,
+        name: 'Theme',
         child: WidgetEntry.multiple(
-          type: WidgetAppearance.focusedAccent,
-          name: 'Theme',
+          name: ' ',
           children: [
             WidgetEntry.single(
               type: WidgetAppearance.focused,
