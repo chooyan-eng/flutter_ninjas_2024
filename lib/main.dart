@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_deck/flutter_deck.dart';
+import 'package:flutter_ninjas_2024/component/clock_theme.dart';
+import 'package:flutter_ninjas_2024/component/tiny_clock.dart';
 import 'package:flutter_ninjas_2024/slide/agenda/slide.dart';
 import 'package:flutter_ninjas_2024/slide/and_more/slide.dart';
 import 'package:flutter_ninjas_2024/slide/element_does/slide.dart';
@@ -13,6 +15,7 @@ import 'package:flutter_ninjas_2024/slide/inside_widget/slide.dart';
 import 'package:flutter_ninjas_2024/slide/of_example/slide.dart';
 import 'package:flutter_ninjas_2024/slide/resources/slide.dart';
 import 'package:flutter_ninjas_2024/slide/self_intro/slide.dart';
+import 'package:flutter_ninjas_2024/slide/tiny_clock/slide.dart';
 import 'package:flutter_ninjas_2024/slide/title/slide.dart';
 import 'package:flutter_ninjas_2024/slide/widgettree_image/slide.dart';
 import 'package:graph_your_widget_tree/graph_your_widget_tree.dart';
@@ -42,8 +45,27 @@ void main() async {
   runApp(const MainApp());
 }
 
-class MainApp extends StatelessWidget {
+class MainApp extends StatefulWidget {
   const MainApp({super.key});
+
+  static MainAppState of(BuildContext context) {
+    return context.findAncestorStateOfType<MainAppState>()!;
+  }
+
+  @override
+  State<MainApp> createState() => MainAppState();
+}
+
+class MainAppState extends State<MainApp> {
+  var _left = 32.0;
+  var _top = 32.0;
+  var _clockTheme = ClockThemeData();
+
+  void updateTheme(ClockThemeData theme) {
+    setState(() {
+      _clockTheme = theme;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -95,45 +117,79 @@ class MainApp extends StatelessWidget {
           lineWidth: 4,
         ),
       },
-      child: FlutterDeckApp(
-        lightTheme: FlutterDeckThemeData(
-          theme: ThemeData(
-            textTheme: const TextTheme(
-              bodyLarge: TextStyle(fontSize: 36),
-              bodyMedium: TextStyle(fontSize: 32),
-              bodySmall: TextStyle(fontSize: 28),
-              labelLarge: TextStyle(fontSize: 40),
-              labelSmall: TextStyle(fontSize: 20),
-            ),
-            appBarTheme: const AppBarTheme(
-              titleTextStyle: TextStyle(
-                fontSize: 40,
-                color: Colors.black87,
+      child: Directionality(
+        textDirection: TextDirection.ltr,
+        child: Stack(
+          children: [
+            SizedBox(
+              width: double.infinity,
+              height: double.infinity,
+              child: FlutterDeckApp(
+                lightTheme: FlutterDeckThemeData(
+                  theme: ThemeData(
+                    textTheme: const TextTheme(
+                      bodyLarge: TextStyle(fontSize: 36),
+                      bodyMedium: TextStyle(fontSize: 32),
+                      bodySmall: TextStyle(fontSize: 28),
+                      labelLarge: TextStyle(fontSize: 40),
+                      labelSmall: TextStyle(fontSize: 20),
+                    ),
+                    appBarTheme: const AppBarTheme(
+                      titleTextStyle: TextStyle(
+                        fontSize: 40,
+                        color: Colors.black87,
+                      ),
+                      foregroundColor: Colors.black87,
+                    ),
+                  ),
+                ),
+                slides: [
+                  const TitleSlide(),
+                  const SelfIntroSlide(),
+                  const ResourcesSlide(),
+                  AgendaSlide(null),
+                  AgendaSlide(0),
+                  const WidgettreeImageSlide(),
+                  const InsideWidgetSlide(),
+                  const ElementDoesSlide(),
+                  const ElementIntroSlide(),
+                  const WidgetElementSlide(),
+                  const OfExampleSlide(),
+                  AgendaSlide(1),
+                  const ExampleNavigatorSlide(),
+                  const ExampleThemeSlide(),
+                  const InheritedWidgetSlide(),
+                  const PopscopeSlide(),
+                  const AndMoreSlide(),
+                  AgendaSlide(2),
+                  const TinyClockSlide(),
+                ],
               ),
-              foregroundColor: Colors.black87,
             ),
-          ),
+            Positioned(
+              left: _left,
+              top: _top,
+              child: GestureDetector(
+                onPanUpdate: (details) {
+                  setState(() {
+                    _left += details.delta.dx;
+                    _top += details.delta.dy;
+                  });
+                },
+                child: DefaultTextStyle(
+                  style: const TextStyle(fontSize: 24, color: Colors.black),
+                  child: SizedBox(
+                    width: 160,
+                    child: ClockTheme(
+                      _clockTheme,
+                      child: const TinyClock(),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
         ),
-        slides: [
-          const TitleSlide(),
-          const SelfIntroSlide(),
-          const ResourcesSlide(),
-          AgendaSlide(null),
-          AgendaSlide(0),
-          const WidgettreeImageSlide(),
-          const InsideWidgetSlide(),
-          const ElementDoesSlide(),
-          const ElementIntroSlide(),
-          const WidgetElementSlide(),
-          const OfExampleSlide(),
-          AgendaSlide(1),
-          const ExampleNavigatorSlide(),
-          const ExampleThemeSlide(),
-          const InheritedWidgetSlide(),
-          const PopscopeSlide(),
-          const AndMoreSlide(),
-          AgendaSlide(2),
-        ],
       ),
     );
   }
