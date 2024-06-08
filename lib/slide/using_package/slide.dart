@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_deck/flutter_deck.dart';
+import 'package:flutter_ninjas_2024/slide/using_package/page.dart';
 
 class UsingPackageSlide extends FlutterDeckSlideWidget {
   const UsingPackageSlide()
@@ -12,7 +13,7 @@ class UsingPackageSlide extends FlutterDeckSlideWidget {
   @override
   FlutterDeckSlide build(BuildContext context) {
     return FlutterDeckSlide.blank(
-      builder: (context) => const Placeholder(),
+      builder: (context) => const UsingPackagePage(),
     );
   }
 }

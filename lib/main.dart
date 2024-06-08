@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_deck/flutter_deck.dart';
 import 'package:flutter_ninjas_2024/component/clock_theme.dart';
 import 'package:flutter_ninjas_2024/component/tiny_clock.dart';
-import 'package:flutter_ninjas_2024/slide/accessing_ancestor/slide.dart';
 import 'package:flutter_ninjas_2024/slide/agenda/slide.dart';
 import 'package:flutter_ninjas_2024/slide/and_more/slide.dart';
 import 'package:flutter_ninjas_2024/slide/clock_theming/slide.dart';
@@ -16,6 +15,7 @@ import 'package:flutter_ninjas_2024/slide/example_theme/slide.dart';
 import 'package:flutter_ninjas_2024/slide/inherited_widget/slide.dart';
 import 'package:flutter_ninjas_2024/slide/inside_widget/slide.dart';
 import 'package:flutter_ninjas_2024/slide/of_example/slide.dart';
+import 'package:flutter_ninjas_2024/slide/operate_from_descendant/slide.dart';
 import 'package:flutter_ninjas_2024/slide/resources/slide.dart';
 import 'package:flutter_ninjas_2024/slide/self_intro/slide.dart';
 import 'package:flutter_ninjas_2024/slide/thank_you/slide.dart';
@@ -37,6 +37,7 @@ enum WidgetAppearance {
   noConnection,
   focusedNoConnection,
   nodeFocused,
+  nodeFocusedAccent,
   errorFocusedNode,
   errorNode,
 }
@@ -110,6 +111,11 @@ class MainAppState extends State<MainApp> {
           lineColor: Colors.orange,
           lineWidth: 4,
         ),
+        WidgetAppearance.nodeFocusedAccent: GraphThemeData(
+          backgroundColor: Colors.blue[100],
+          lineColor: Colors.blue,
+          lineWidth: 4,
+        ),
         WidgetAppearance.errorFocusedNode: const GraphThemeData(
           backgroundColor: Colors.red,
           textStyle: TextStyle(
@@ -174,7 +180,7 @@ class MainAppState extends State<MainApp> {
                   const ClockThemingSlide(),
                   const UsingArgumentSlide(),
                   const UsingThemePatternSlide(),
-                  const AccessingAncestorSlide(),
+                  const OperateFromDescendantSlide(),
                   const UsingPackageSlide(),
                   const UsingContextSlide(),
                   const ConclusionSlide(),

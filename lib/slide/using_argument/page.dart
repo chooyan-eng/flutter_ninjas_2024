@@ -10,19 +10,21 @@ class UsingArgumentPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Using arguments'),
+        title: const Text('Option 1: Using arguments'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(32),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            ListItem.rich(const [
-              'One option is',
-              ' to pass arguments and update by rebuilding',
-            ]),
-            const Gap(32),
-            const CodeContainer(_code),
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                CodeContainer(_code),
+                Gap(32),
+                CodeContainer(_codeClock),
+              ],
+            ),
             const Gap(32),
             const Text(
               'Pros',
@@ -52,8 +54,9 @@ class UsingArgumentPage extends StatelessWidget {
             ]),
             const Gap(16),
             ListItem.rich(const [
-              'need "bucket relay"',
-              ' if TinyClock is far away on the widget tree from StatefulWidget',
+              'need "prop drilling"',
+              ' if TinyClock is far away on the widget tree',
+              ' from StatefulWidget',
             ]),
           ],
         ),
@@ -69,3 +72,10 @@ TinyClock(
     buttonColor: _buttonColor,
     textColor: _textColor,
 ),''';
+
+const _codeClock = '''
+Widget build(BuildContext context) {
+    Container(
+        color: backgroundColor,
+    ),
+}''';

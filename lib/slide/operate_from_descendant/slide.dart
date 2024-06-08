@@ -1,18 +1,19 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_deck/flutter_deck.dart';
+import 'package:flutter_ninjas_2024/slide/operate_from_descendant/page.dart';
 
-class AccessingAncestorSlide extends FlutterDeckSlideWidget {
-  const AccessingAncestorSlide()
+class OperateFromDescendantSlide extends FlutterDeckSlideWidget {
+  const OperateFromDescendantSlide()
       : super(
           configuration: const FlutterDeckSlideConfiguration(
-            route: '/accessing-ancestor',
+            route: '/operate-from-descendant',
           ),
         );
 
   @override
   FlutterDeckSlide build(BuildContext context) {
     return FlutterDeckSlide.blank(
-      builder: (context) => const Placeholder(),
+      builder: (context) => const OperateFromDescendantPage(),
     );
   }
 }

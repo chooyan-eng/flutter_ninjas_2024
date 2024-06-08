@@ -10,7 +10,7 @@ class ClockThemingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('How can we change TinyClock\'s theme?'),
+        title: const Text('Case 1: How to change its theme?'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(32),

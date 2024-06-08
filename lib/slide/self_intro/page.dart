@@ -19,7 +19,7 @@ class SelfIntroPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             const Gap(32),
-            ListItem.text('Tsuyoshi Chujo : Chooyan'),
+            ListItem.text('Tsuyoshi Chujo (Chooyan)'),
             const Gap(32),
             ListItem.text('Freelance Flutter Developer in Japan'),
             const Gap(32),
@@ -36,7 +36,7 @@ class SelfIntroPage extends StatelessWidget {
                   label: 'Developing',
                   path: 'assets/images/livmap.png',
                 ),
-                Gap(64),
+                Gap(120),
                 _Logo(
                   label: 'Supporting',
                   path: 'assets/images/studyplus.png',

@@ -11,8 +11,9 @@ class ThankYouSlide extends FlutterDeckSlideWidget {
 
   @override
   FlutterDeckSlide build(BuildContext context) {
-    return FlutterDeckSlide.blank(
-      builder: (context) => const Placeholder(),
+    return FlutterDeckSlide.bigFact(
+      title: 'Enjoy Widget Tree!',
+      subtitle: 'Thank you for your attention! 🌲',
     );
   }
 }
