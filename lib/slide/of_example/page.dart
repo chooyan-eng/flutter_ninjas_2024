@@ -47,7 +47,7 @@ class _OfExamplePageState extends State<OfExamplePage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Example: Navigator.of(context)'),
+        title: const Text('Example of leveraging the tree'),
       ),
       body: Container(
         width: double.infinity,
@@ -63,9 +63,8 @@ class _OfExamplePageState extends State<OfExamplePage> {
                   ListItem.rich(
                     const [
                       '',
-                      'Navigator.of(context) looks up the ancestors',
-                      ' on the element tree starting with a given',
-                      ' BuildContext (Element).',
+                      'Navigator.of(context) traverses up ancestors of the given context',
+                      ' on the element tree.',
                     ],
                   ),
                   const Gap(64),

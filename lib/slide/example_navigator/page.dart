@@ -45,9 +45,9 @@ class ExampleNavigatorPage extends StatelessWidget {
                   ListItem.rich(const [
                     'BuildContext has',
                     ' findAncestorStateOfType<T>() method',
-                    ' that looks up',
+                    ' that searchs for',
                     ' State of the type T',
-                    ' from ancestors.',
+                    ' by traversing up the tree.',
                   ]),
                   const Gap(32),
                   ListItem.rich(const [

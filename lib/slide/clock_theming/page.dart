@@ -10,7 +10,7 @@ class ClockThemingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Case 1: How to change its theme?'),
+        title: const Text('Case 1: How to pass its configuration?'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(32),

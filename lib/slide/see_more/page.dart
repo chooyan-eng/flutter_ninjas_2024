@@ -17,14 +17,18 @@ class SeeMorePage extends StatelessWidget {
         child: Center(
           child: Column(
             mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               _Item(
                 url: 'https://github.com/chooyan-eng/graph_your_widget_tree',
-                description: '',
+                description: 'Graph widget applies its theme using GraphTheme\n'
+                    'found by GraphTheme.of(context)',
               ),
               _Item(
                 url: 'https://github.com/chooyan-eng/flutter_ninjas_2024',
-                description: '',
+                description:
+                    'TinyClock widget using the patterns discussed so far, \n'
+                    'and also an example of flutter_deck package',
               ),
             ],
           ),
