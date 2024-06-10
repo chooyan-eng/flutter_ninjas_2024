@@ -12,7 +12,7 @@ class ResourcesPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text('Resources')),
       body: Padding(
-        padding: const EdgeInsets.all(64),
+        padding: const EdgeInsets.all(32),
         child: Center(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -39,7 +39,7 @@ class ResourcesPage extends StatelessWidget {
                   description: 'Articles and books written in Japanese,'
                       ' mainly focusing on mechanisms of Flutter and packages.',
                 ),
-              ].intersperse(const Gap(64)),
+              ].intersperse(const Gap(32)),
               const Gap(64),
             ],
           ),
@@ -62,28 +62,31 @@ class _Item extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return InkWell(
       onTap: () {
         launchUrl(Uri.parse(url));
       },
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              Image.asset(
-                path,
-                height: 52,
-              ),
-              const Gap(16),
-              Link(url),
-            ],
-          ),
-          const Gap(24),
-          Text(description),
-        ],
+      child: Padding(
+        padding: const EdgeInsets.all(32),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Image.asset(
+                  path,
+                  height: 52,
+                ),
+                const Gap(16),
+                Link(url),
+              ],
+            ),
+            const Gap(24),
+            Text(description),
+          ],
+        ),
       ),
     );
   }

@@ -19,45 +19,43 @@ class ExampleNavigatorPage extends StatelessWidget {
           children: [
             Flexible(
               flex: 3,
-              child: Container(
-                child: Column(
-                  children: [
-                    ListItem.rich(const [
-                      'Navigator provides',
-                      ' static .of() method',
-                      ' to retrieve a relevant NavigatorState.',
-                    ]),
-                    const Gap(16),
-                    Container(
-                      padding: const EdgeInsets.all(16),
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: Colors.purple,
-                          width: 4,
-                        ),
-                        color: Colors.white,
+              child: Column(
+                children: [
+                  ListItem.rich(const [
+                    'Navigator provides',
+                    ' static .of() method',
+                    ' to retrieve a relevant NavigatorState.',
+                  ]),
+                  const Gap(16),
+                  Container(
+                    padding: const EdgeInsets.all(16),
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: Colors.purple,
+                        width: 4,
                       ),
-                      child: Text.rich(
-                        highlighter.highlight(_code),
-                        style: const TextStyle(fontSize: 24),
-                      ),
+                      color: Colors.white,
                     ),
-                    const Gap(32),
-                    ListItem.rich(const [
-                      'BuildContext has',
-                      ' findAncestorStateOfType<T>() method',
-                      ' that looks up',
-                      ' State of the type T',
-                      ' from ancestors.',
-                    ]),
-                    const Gap(32),
-                    ListItem.rich(const [
-                      '',
-                      'static .of() method',
-                      ' is a pattern to provide a handy method to descendants.'
-                    ]),
-                  ],
-                ),
+                    child: Text.rich(
+                      highlighter.highlight(_code),
+                      style: const TextStyle(fontSize: 24),
+                    ),
+                  ),
+                  const Gap(32),
+                  ListItem.rich(const [
+                    'BuildContext has',
+                    ' findAncestorStateOfType<T>() method',
+                    ' that looks up',
+                    ' State of the type T',
+                    ' from ancestors.',
+                  ]),
+                  const Gap(32),
+                  ListItem.rich(const [
+                    'Providing',
+                    ' static .of() method',
+                    ' is a common pattern in Flutter.'
+                  ]),
+                ],
               ),
             ),
             const Gap(32),

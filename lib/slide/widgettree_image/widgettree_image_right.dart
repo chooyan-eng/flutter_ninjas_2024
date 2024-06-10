@@ -19,7 +19,7 @@ class WidgettreeImageRight extends StatelessWidget {
               children: [
                 Center(
                   child: Text(
-                    'Widget Tree?',
+                    'Widget tree?',
                     style: Theme.of(context).textTheme.labelLarge!.copyWith(
                           decoration: TextDecoration.underline,
                         ),
@@ -29,14 +29,14 @@ class WidgettreeImageRight extends StatelessWidget {
                 ...<Widget>[
                   const Text('- Widgets form a widget tree'),
                   const Text('- Everything is a widget'),
-                  const Text('- State is also managed on the tree'),
-                  const Text('- Rebuild is managed inside the tree'),
-                  const Text('- Layouts are calculated using the tree'),
+                  const Text('- State is managed on the tree by default'),
+                  const Text('- Rebuild is managed on the tree'),
+                  const Text('- Layouts are calculated based on the tree'),
                 ].intersperse(const Gap(32)),
                 const Gap(64),
                 const Text(
-                  'Everything happens on the widget tree'
-                  ' using the relationships between ancestors and descendants.',
+                  'Everything is done on the widget tree,'
+                  ' especially on the relationship between "ancestors" and "descendants".',
                 ),
               ],
             ),

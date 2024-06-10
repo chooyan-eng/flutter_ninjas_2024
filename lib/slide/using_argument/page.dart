@@ -36,7 +36,7 @@ class UsingArgumentPage extends StatelessWidget {
             const Gap(16),
             ListItem.rich(const [
               '',
-              'straightforward',
+              'Straightforward',
               ' and easy to understand',
             ]),
             const Gap(32),
@@ -49,12 +49,12 @@ class UsingArgumentPage extends StatelessWidget {
             ),
             const Gap(16),
             ListItem.rich(const [
-              'need to write the same code multiple times',
+              'Need to write the same code multiple times',
               ' if we need multiple TinyClock',
             ]),
             const Gap(16),
             ListItem.rich(const [
-              'need "prop drilling"',
+              'Need "prop drilling"',
               ' if TinyClock is far away on the widget tree',
               ' from StatefulWidget',
             ]),

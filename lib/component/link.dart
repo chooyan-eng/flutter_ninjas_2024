@@ -8,7 +8,7 @@ class Link extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return InkWell(
       onTap: () {
         launchUrl(Uri.parse(url));
       },

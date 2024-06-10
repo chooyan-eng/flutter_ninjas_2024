@@ -24,7 +24,7 @@ class AgendaPage extends StatelessWidget {
                 children: <Widget>[
                   Center(
                     child: Text(
-                      'Agenda',
+                      'Overview',
                       style: Theme.of(context).textTheme.labelLarge!.copyWith(
                             decoration: TextDecoration.underline,
                             decorationColor: Colors.white,
@@ -41,7 +41,7 @@ class AgendaPage extends StatelessWidget {
                     isHighlighted: highLighted == null || highLighted == 1,
                   ),
                   _HighlightedText(
-                    '3. Ideas to enhance usability of our widgets',
+                    '3. One more option to enhance our widgets',
                     isHighlighted: highLighted == null || highLighted == 2,
                   ),
                 ].intersperse(const Gap(32)).toList(),

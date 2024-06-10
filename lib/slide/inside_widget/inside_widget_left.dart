@@ -16,7 +16,7 @@ class InsideWidgetLeft extends StatelessWidget {
             children: [
               Center(
                 child: Text(
-                  'But In Reality...',
+                  'In reality however...',
                   style: Theme.of(context).textTheme.labelLarge!.copyWith(
                         decoration: TextDecoration.underline,
                       ),
@@ -31,7 +31,7 @@ class InsideWidgetLeft extends StatelessWidget {
               const Gap(120),
               Center(
                 child: Text(
-                  'So, Who Does?',
+                  'So, who does?',
                   style: Theme.of(context)
                       .textTheme
                       .labelLarge!

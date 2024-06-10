@@ -44,7 +44,7 @@ class ConclusionSlide extends FlutterDeckSlideWidget {
                   const [
                     'We always have',
                     ' multiple options.',
-                    ' Choose the most relevant one for your use case.',
+                    ' Choose the most relevant one depending on our use cases.',
                   ],
                 ),
               ].intersperse(const Gap(64)).toList(),

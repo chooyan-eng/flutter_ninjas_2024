@@ -23,7 +23,7 @@ class _ElementWidgetPageState extends State<ElementWidgetPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Widget tree and associated Element tree'),
+        title: const Text('Widget tree / Element tree'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(32),
@@ -77,8 +77,8 @@ class _WidgetTree extends StatelessWidget {
         const Gap(32),
         Expanded(
           child: Graph(
-            onHover: (entry) {
-              final item = (entry?.key as ValueKey<int>?)?.value;
+            onTap: (entry) {
+              final item = (entry.key as ValueKey<int>?)?.value;
               onHover(item);
             },
             root: WidgetEntry.single(
@@ -160,8 +160,8 @@ class _ElementTree extends StatelessWidget {
         const Gap(32),
         Expanded(
           child: Graph(
-            onHover: (entry) {
-              final item = (entry?.key as ValueKey<int>?)?.value;
+            onTap: (entry) {
+              final item = (entry.key as ValueKey<int>?)?.value;
               onHover(item);
             },
             root: WidgetEntry.single(

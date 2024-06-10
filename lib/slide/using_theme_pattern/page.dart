@@ -54,13 +54,14 @@ class UsingThemePatternPage extends StatelessWidget {
                   ListItem.rich(const [
                     'Write',
                     ' once',
-                    ' and apply',
+                    ' and apply to',
                     ' all descendants'
                   ]),
                   const Gap(16),
                   ListItem.rich(const [
-                    'No need to',
-                    ' relay the bucket',
+                    'No',
+                    ' prop drilling',
+                    ' required',
                   ]),
                   const Gap(16),
                   ListItem.rich(const [
@@ -123,8 +124,8 @@ class UsingThemePatternPage extends StatelessWidget {
                   const Gap(16),
                   ListItem.rich(const [
                     'Difficult to understand',
-                    ' who and how applies the theme',
-                    ', especially once the widget tree becomes complex',
+                    ' who and how the theme is applied',
+                    ', especially when the widget tree is complex',
                   ]),
                 ],
               ),

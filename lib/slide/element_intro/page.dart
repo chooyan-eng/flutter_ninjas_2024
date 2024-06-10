@@ -19,22 +19,22 @@ class ElementIntroPage extends StatelessWidget {
           children: [
             const Gap(32),
             Text(
-              'What is Element',
+              'Element',
               style: Theme.of(context).textTheme.labelLarge!.copyWith(
                     decoration: TextDecoration.underline,
                   ),
             ),
-            const Gap(32),
+            const Gap(16),
             ListItem.rich(const [
               '',
               'Element',
               ' is',
-              ' an instance',
-              ' of Widget',
+              ' an instantiation',
+              ' of a Widget',
             ]),
             const Gap(32),
             ListItem.rich(const [
-              'Every single widget creates its associated Element by',
+              'Every single widget creates its associated Element via',
               ' createElement()',
             ]),
             const Gap(32),
@@ -44,20 +44,25 @@ class ElementIntroPage extends StatelessWidget {
               ' and',
               ' the logic to visit its child(ren)',
             ]),
-            const Gap(64),
+            const Gap(32),
+            ListItem.rich(const [
+              '',
+              'Element forms a tree',
+            ]),
+            const Gap(32),
             Text(
-              'What is BuildContext',
+              'BuildContext',
               style: Theme.of(context).textTheme.labelLarge!.copyWith(
                     decoration: TextDecoration.underline,
                   ),
             ),
-            const Gap(32),
+            const Gap(16),
             ListItem.rich(const [
               '',
               'BuildContext',
               ' is',
-              ' an interface for us',
-              ' to use Element\'s functionality',
+              ' an interface',
+              ' providing Element\'s functionality based on the tree',
             ]),
             const Gap(32),
             Text(

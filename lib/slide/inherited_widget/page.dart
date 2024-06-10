@@ -33,9 +33,15 @@ class InheritedWidgetPage extends StatelessWidget {
                 children: [
                   ListItem.rich(
                     const [
-                      'While findAncestorStateOfType<T>() looks up ancestors one by one, O(N) in other words,',
-                      ' dependOnInheritedWidgetOfExactType<T>() returns one from direct references of Map',
-                      ', so O(1).',
+                      'findAncestorStateOfType<T>() looks up ancestors',
+                      ' one by one, O(N)',
+                    ],
+                  ),
+                  const Gap(16),
+                  ListItem.rich(
+                    const [
+                      'dependOnInheritedWidgetOfExactType<T>() returns one',
+                      ' from direct references, O(1).',
                     ],
                   ),
                   const Gap(16),

@@ -16,7 +16,9 @@ import 'package:flutter_ninjas_2024/slide/inherited_widget/slide.dart';
 import 'package:flutter_ninjas_2024/slide/inside_widget/slide.dart';
 import 'package:flutter_ninjas_2024/slide/of_example/slide.dart';
 import 'package:flutter_ninjas_2024/slide/operate_from_descendant/slide.dart';
+import 'package:flutter_ninjas_2024/slide/options/slide.dart';
 import 'package:flutter_ninjas_2024/slide/resources/slide.dart';
+import 'package:flutter_ninjas_2024/slide/see_more/slide.dart';
 import 'package:flutter_ninjas_2024/slide/self_intro/slide.dart';
 import 'package:flutter_ninjas_2024/slide/thank_you/slide.dart';
 import 'package:flutter_ninjas_2024/slide/tiny_clock/slide.dart';
@@ -183,7 +185,9 @@ class MainAppState extends State<MainApp> {
                   const OperateFromDescendantSlide(),
                   const UsingPackageSlide(),
                   const UsingContextSlide(),
+                  const OptionsSlide(),
                   const ConclusionSlide(),
+                  const SeeMoreSlide(),
                   const ThankYouSlide(),
                 ],
               ),

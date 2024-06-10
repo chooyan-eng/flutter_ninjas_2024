@@ -65,10 +65,9 @@ packages:
   flutter_deck:
     dependency: "direct main"
     description:
-      name: flutter_deck
-      sha256: "9fa10f83a50eed198cc4d69505c65d0876afe464a526737ab06799237c1d48f4"
-      url: "https://pub.dev"
-    source: hosted
+      path: "../../flutter_packages/flutter_deck/packages/flutter_deck"
+      relative: true
+    source: path
     version: "0.14.0"
   flutter_deck_client:
     dependency: transitive

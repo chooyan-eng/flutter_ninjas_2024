@@ -9,7 +9,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_deck: ^0.14.0
+  flutter_deck: 
+    path: ../../flutter_packages/flutter_deck/packages/flutter_deck
   gap: ^3.0.1
   graph_your_widget_tree:
     path: ../../flutter_packages/graph_your_widget_tree
