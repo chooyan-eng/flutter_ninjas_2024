@@ -63,7 +63,7 @@ class _OfExamplePageState extends State<OfExamplePage> {
                   ListItem.rich(
                     const [
                       '',
-                      'Navigator.of(context) traverses up ancestors of the given context',
+                      'Navigator.of(context) traverses ancestors up from the given context',
                       ' on the element tree.',
                     ],
                   ),
