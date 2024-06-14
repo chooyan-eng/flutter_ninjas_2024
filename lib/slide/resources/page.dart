@@ -10,7 +10,7 @@ class ResourcesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Resources')),
+      appBar: AppBar(title: const Text('Links')),
       body: Padding(
         padding: const EdgeInsets.all(32),
         child: Center(
@@ -21,17 +21,17 @@ class ResourcesPage extends StatelessWidget {
               const Gap(32),
               ...<Widget>[
                 const _Item(
+                  url: 'https://github.com/chooyan-eng',
+                  path: 'assets/images/github.png',
+                  description:
+                      'My open-source projects and so many practice Flutter projects.',
+                ),
+                const _Item(
                   url: 'https://hashnode.com/@chooyan-eng',
                   path: 'assets/images/hashnode.png',
                   description:
                       'Published articles in English mainly focusing on'
                       ' fundamentals of Flutter and packages.',
-                ),
-                const _Item(
-                  url: 'https://github.com/chooyan-eng',
-                  path: 'assets/images/github.png',
-                  description:
-                      'My open-source projects and so many practice Flutter projects.',
                 ),
                 const _Item(
                   url: 'https://zenn.dev/chooyan',

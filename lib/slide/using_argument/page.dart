@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ninjas_2024/component/code_container.dart';
+import 'package:flutter_ninjas_2024/component/cons.dart';
 import 'package:flutter_ninjas_2024/component/list_item.dart';
+import 'package:flutter_ninjas_2024/component/pros.dart';
 import 'package:gap/gap.dart';
 
 class UsingArgumentPage extends StatelessWidget {
@@ -10,7 +12,7 @@ class UsingArgumentPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Option 1: Using arguments'),
+        title: const Text('Option 1: Use arguments'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(32),
@@ -26,13 +28,7 @@ class UsingArgumentPage extends StatelessWidget {
               ],
             ),
             const Gap(32),
-            const Text(
-              'Pros',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                decoration: TextDecoration.underline,
-              ),
-            ),
+            const Pros(),
             const Gap(16),
             ListItem.rich(const [
               '',
@@ -40,13 +36,7 @@ class UsingArgumentPage extends StatelessWidget {
               ' and easy to understand',
             ]),
             const Gap(32),
-            const Text(
-              'Cons',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                decoration: TextDecoration.underline,
-              ),
-            ),
+            const Cons(),
             const Gap(16),
             ListItem.rich(const [
               'Need to write the same code multiple times',

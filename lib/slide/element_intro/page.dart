@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ninjas_2024/component/code_container.dart';
 import 'package:flutter_ninjas_2024/component/list_item.dart';
-import 'package:flutter_ninjas_2024/main.dart';
 import 'package:gap/gap.dart';
 
 class ElementIntroPage extends StatelessWidget {
@@ -27,9 +27,7 @@ class ElementIntroPage extends StatelessWidget {
             const Gap(16),
             ListItem.rich(const [
               '',
-              'Element',
-              ' is',
-              ' an instantiation',
+              'Element is an instantiation',
               ' of a Widget',
             ]),
             const Gap(32),
@@ -48,6 +46,7 @@ class ElementIntroPage extends StatelessWidget {
             ListItem.rich(const [
               '',
               'Element forms a tree',
+              ' in reality',
             ]),
             const Gap(32),
             Text(
@@ -69,20 +68,8 @@ class ElementIntroPage extends StatelessWidget {
               'Definision of Element class',
               style: Theme.of(context).textTheme.labelSmall,
             ),
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Theme.of(context).colorScheme.primary,
-                  width: 8,
-                ),
-                color: Colors.white,
-              ),
-              padding: const EdgeInsets.all(16),
-              child: Text.rich(
-                highlighter.highlight(
-                  'abstract class Element extends DiagnosticableTree implements BuildContext {',
-                ),
-              ),
+            const CodeContainer(
+              'abstract class Element extends DiagnosticableTree implements BuildContext {',
             ),
           ],
         ),

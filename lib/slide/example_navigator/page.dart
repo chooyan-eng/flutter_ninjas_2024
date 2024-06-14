@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ninjas_2024/component/code_container.dart';
 import 'package:flutter_ninjas_2024/component/list_item.dart';
 import 'package:flutter_ninjas_2024/main.dart';
 import 'package:gap/gap.dart';
@@ -27,20 +28,7 @@ class ExampleNavigatorPage extends StatelessWidget {
                     ' to retrieve a relevant NavigatorState.',
                   ]),
                   const Gap(16),
-                  Container(
-                    padding: const EdgeInsets.all(16),
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                        color: Colors.purple,
-                        width: 4,
-                      ),
-                      color: Colors.white,
-                    ),
-                    child: Text.rich(
-                      highlighter.highlight(_code),
-                      style: const TextStyle(fontSize: 24),
-                    ),
-                  ),
+                  const CodeContainer(_code),
                   const Gap(32),
                   ListItem.rich(const [
                     'BuildContext has',

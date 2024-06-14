@@ -42,7 +42,7 @@ class ClockThemingPage extends StatelessWidget {
                     )
                     .toList(),
               ),
-              const Gap(120),
+              const Gap(160),
             ],
           ),
         ),

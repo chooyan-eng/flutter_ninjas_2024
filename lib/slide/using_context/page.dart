@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ninjas_2024/component/code_container.dart';
+import 'package:flutter_ninjas_2024/component/cons.dart';
 import 'package:flutter_ninjas_2024/component/list_item.dart';
+import 'package:flutter_ninjas_2024/component/pros.dart';
 import 'package:flutter_ninjas_2024/main.dart';
 import 'package:gap/gap.dart';
 import 'package:graph_your_widget_tree/graph_your_widget_tree.dart';
@@ -12,7 +14,7 @@ class UsingContextPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Option 2: Use .of(context) pattern'),
+        title: const Text('Option 2: Use findAncestorStateOfType<T>()'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(32),
@@ -32,13 +34,7 @@ class UsingContextPage extends StatelessWidget {
                   const Gap(16),
                   const CodeContainer(_codeOperator),
                   const Gap(32),
-                  const Text(
-                    'Pros',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      decoration: TextDecoration.underline,
-                    ),
-                  ),
+                  const Pros(),
                   const Gap(16),
                   ListItem.rich(const [
                     '',
@@ -50,13 +46,7 @@ class UsingContextPage extends StatelessWidget {
                     ' on the widget tree',
                   ]),
                   const Gap(32),
-                  const Text(
-                    'Cons',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      decoration: TextDecoration.underline,
-                    ),
-                  ),
+                  const Cons(),
                   const Gap(16),
                   ListItem.rich(const [
                     '',

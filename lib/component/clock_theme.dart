@@ -23,7 +23,9 @@ class ClockTheme extends InheritedWidget {
 
   final ClockThemeData themeData;
 
-  static ClockThemeData of(BuildContext context) {
+  static ClockThemeData of(
+    BuildContext context,
+  ) {
     final theme = context.dependOnInheritedWidgetOfExactType<ClockTheme>();
     return theme?.themeData ?? const ClockThemeData();
   }

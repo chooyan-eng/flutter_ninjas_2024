@@ -75,8 +75,9 @@ class _OfExamplePageState extends State<OfExamplePage> {
                   Expanded(
                     child: Container(
                       decoration: BoxDecoration(
-                        border: Border.all(color: Colors.purple, width: 4),
-                        color: Colors.white,
+                        border:
+                            Border.all(color: Colors.purple.shade300, width: 4),
+                        color: Colors.black87,
                       ),
                       padding: const EdgeInsets.all(16),
                       child: SingleChildScrollView(

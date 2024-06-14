@@ -12,7 +12,7 @@ class OptionsSlide extends FlutterDeckSlideWidget {
   @override
   FlutterDeckSlide build(BuildContext context) {
     return FlutterDeckSlide.bigFact(
-      title: 'So which way to use?',
+      title: 'So which option to use?',
       subtitle: 'It depends. They are "options" in the end.',
     );
   }

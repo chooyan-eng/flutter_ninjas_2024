@@ -27,6 +27,7 @@ import 'package:flutter_ninjas_2024/slide/using_argument/slide.dart';
 import 'package:flutter_ninjas_2024/slide/using_context/slide.dart';
 import 'package:flutter_ninjas_2024/slide/using_package/slide.dart';
 import 'package:flutter_ninjas_2024/slide/using_theme_pattern/slide.dart';
+import 'package:flutter_ninjas_2024/slide/why_widget_tree/slide.dart';
 import 'package:flutter_ninjas_2024/slide/widgettree_image/slide.dart';
 import 'package:graph_your_widget_tree/graph_your_widget_tree.dart';
 import 'package:syntax_highlight/syntax_highlight.dart';
@@ -47,7 +48,7 @@ enum WidgetAppearance {
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Highlighter.initialize(['dart', 'yaml']);
-  final theme = await HighlighterTheme.loadLightTheme();
+  final theme = await HighlighterTheme.loadDarkTheme();
   highlighter = Highlighter(
     language: 'dart',
     theme: theme,
@@ -165,6 +166,7 @@ class MainAppState extends State<MainApp> {
                   const ResourcesSlide(),
                   AgendaSlide(null),
                   AgendaSlide(0),
+                  const WhyWidgetTreeSlide(),
                   const WidgettreeImageSlide(),
                   const InsideWidgetSlide(),
                   const ElementDoesSlide(),

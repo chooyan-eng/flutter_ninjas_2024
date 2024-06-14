@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ninjas_2024/component/code_container.dart';
+import 'package:flutter_ninjas_2024/component/cons.dart';
 import 'package:flutter_ninjas_2024/component/list_item.dart';
+import 'package:flutter_ninjas_2024/component/pros.dart';
 import 'package:flutter_ninjas_2024/component/second_case_graph.dart';
 import 'package:gap/gap.dart';
 
@@ -11,7 +13,7 @@ class UsingPackagePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Option 1: Using state management package'),
+        title: const Text('Option 1: Use state management package'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(32),
@@ -63,13 +65,7 @@ class UsingPackagePage extends StatelessWidget {
                   const Gap(16),
                   const CodeContainer(_codeOperator),
                   const Gap(32),
-                  const Text(
-                    'Pros',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      decoration: TextDecoration.underline,
-                    ),
-                  ),
+                  const Pros(),
                   const Gap(16),
                   ListItem.rich(const [
                     '',
@@ -77,13 +73,7 @@ class UsingPackagePage extends StatelessWidget {
                     ' to code with the package\'s support',
                   ]),
                   const Gap(32),
-                  const Text(
-                    'Cons',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      decoration: TextDecoration.underline,
-                    ),
-                  ),
+                  const Cons(),
                   const Gap(16),
                   ListItem.rich(const [
                     '',

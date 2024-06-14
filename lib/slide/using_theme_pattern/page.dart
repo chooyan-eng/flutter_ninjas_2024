@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ninjas_2024/component/clock_theme.dart';
 import 'package:flutter_ninjas_2024/component/code_container.dart';
+import 'package:flutter_ninjas_2024/component/cons.dart';
 import 'package:flutter_ninjas_2024/component/list_item.dart';
+import 'package:flutter_ninjas_2024/component/pros.dart';
 import 'package:flutter_ninjas_2024/component/tiny_clock.dart';
 import 'package:gap/gap.dart';
 
@@ -12,7 +14,8 @@ class UsingThemePatternPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Option 2: Using Theme pattern'),
+        title:
+            const Text('Option 2: Use dependOnInheritedWidgetOfExactType<T>()'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(32),
@@ -43,13 +46,7 @@ class UsingThemePatternPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
-                    'Pros',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      decoration: TextDecoration.underline,
-                    ),
-                  ),
+                  const Pros(),
                   const Gap(16),
                   ListItem.rich(const [
                     'Write',
@@ -114,13 +111,7 @@ class UsingThemePatternPage extends StatelessWidget {
                     ),
                   ),
                   const Gap(32),
-                  const Text(
-                    'Cons',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      decoration: TextDecoration.underline,
-                    ),
-                  ),
+                  const Cons(),
                   const Gap(16),
                   ListItem.rich(const [
                     'Difficult to understand',
@@ -138,18 +129,12 @@ class UsingThemePatternPage extends StatelessWidget {
 }
 
 const _code = '''
-ClockTheme(
-    data: ClockThemeData(
-        backgroundColor: _backgroundColor,
-        borderColor: _borderColor,
-        buttonColor: _buttonColor,
-        textColor: _textColor,
-    ), 
-    child: SomeWidget(
-        ...
-        child: TinyClock(),
-    ),
-),''';
+static ClockThemeData of(
+    BuildContext context,
+) {
+    final theme = context.dependOnInheritedWidgetOfExactType<ClockTheme>();
+    return theme?.themeData ?? const ClockThemeData();
+}''';
 
 const _codeClock = '''
 Widget build(BuildContext context) {

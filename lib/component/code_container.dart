@@ -17,10 +17,10 @@ class CodeContainer extends StatelessWidget {
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         border: Border.all(
-          color: Colors.purple,
+          color: Colors.purple.shade300,
           width: 4,
         ),
-        color: Colors.white,
+        color: Colors.black87,
       ),
       child: Text.rich(
         highlighter.highlight(code),

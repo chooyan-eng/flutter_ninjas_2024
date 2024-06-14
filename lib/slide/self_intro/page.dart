@@ -88,10 +88,9 @@ class _SelfIntroPageState extends State<SelfIntroPage> {
                   ],
                 ),
                 const Gap(32),
-                ListItem.rich(const [
-                  '',
-                  'Love Widget Tree!',
-                ]),
+                ListItem.text(
+                  'Conference speaker in Japan',
+                ),
               ].intersperse(const Gap(12)).toList(),
             ),
           ),
@@ -105,7 +104,7 @@ class _SelfIntroPageState extends State<SelfIntroPage> {
                       children: [
                         SizedBox(
                           width: 500,
-                          height: 200,
+                          height: 400,
                           child: Crop(
                             controller: _controller,
                             withCircleUi: true,

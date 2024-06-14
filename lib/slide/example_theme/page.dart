@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ninjas_2024/component/code_container.dart';
 import 'package:flutter_ninjas_2024/component/list_item.dart';
 import 'package:flutter_ninjas_2024/main.dart';
 import 'package:gap/gap.dart';
@@ -31,20 +32,7 @@ class ExampleThemePage extends StatelessWidget {
                     ],
                   ),
                   const Gap(16),
-                  Container(
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                        color: Colors.purple,
-                        width: 4,
-                      ),
-                      color: Colors.white,
-                    ),
-                    padding: const EdgeInsets.all(16),
-                    child: Text.rich(
-                      highlighter.highlight(_code),
-                      style: const TextStyle(fontSize: 24),
-                    ),
-                  ),
+                  const CodeContainer(_code),
                   const Gap(32),
                   ListItem.rich(
                     const [

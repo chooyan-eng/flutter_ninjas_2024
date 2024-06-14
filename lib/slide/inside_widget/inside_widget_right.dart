@@ -9,7 +9,7 @@ class InsideWidgetRight extends StatelessWidget {
     final highlightedCode = highlighter.highlight(_code);
 
     return Material(
-      color: Colors.white,
+      color: Colors.black87,
       child: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(16),
