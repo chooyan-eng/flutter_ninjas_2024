@@ -11,10 +11,16 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_deck: 
-    path: ../../flutter_packages/flutter_deck/packages/flutter_deck
+    # path: ../../flutter_packages/flutter_deck/packages/flutter_deck
+    git: 
+      url: git@github.com:mkobuolys/flutter_deck.git
+      path: packages/flutter_deck
   gap: ^3.0.1
   graph_your_widget_tree:
-    path: ../../flutter_packages/graph_your_widget_tree
+    # path: ../../flutter_packages/graph_your_widget_tree
+    git: 
+      url: git@github.com:chooyan-eng/graph_your_widget_tree.git
+
   intersperse: ^2.0.0
   syntax_highlight: ^0.4.0
   url_launcher: ^6.2.6

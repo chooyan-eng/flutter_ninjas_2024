@@ -89,9 +89,11 @@ packages:
   flutter_deck:
     dependency: "direct main"
     description:
-      path: "../../flutter_packages/flutter_deck/packages/flutter_deck"
-      relative: true
-    source: path
+      path: "packages/flutter_deck"
+      ref: HEAD
+      resolved-ref: "86b7498bf1924df0bc2cc4edd9476edf39966d0b"
+      url: "git@github.com:mkobuolys/flutter_deck.git"
+    source: git
     version: "0.14.0"
   flutter_deck_client:
     dependency: transitive
@@ -146,9 +148,11 @@ packages:
   graph_your_widget_tree:
     dependency: "direct main"
     description:
-      path: "../../flutter_packages/graph_your_widget_tree"
-      relative: true
-    source: path
+      path: "."
+      ref: HEAD
+      resolved-ref: "57f6468aba89787a8610a958c0a9d9a5b0ce4019"
+      url: "git@github.com:chooyan-eng/graph_your_widget_tree.git"
+    source: git
     version: "0.1.1"
   highlight:
     dependency: transitive
