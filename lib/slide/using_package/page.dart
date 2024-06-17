@@ -28,8 +28,8 @@ class UsingPackagePage extends StatelessWidget {
                     child: SecondCaseGraph(),
                   ),
                   Positioned(
-                    right: 16,
-                    top: 16,
+                    right: -16,
+                    top: 64,
                     child: Container(
                       width: 160,
                       height: 80,

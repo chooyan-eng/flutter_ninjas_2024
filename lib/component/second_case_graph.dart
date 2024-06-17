@@ -8,29 +8,32 @@ class SecondCaseGraph extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Graph(
-      root: WidgetEntry.multiple(
+      root: WidgetEntry.single(
         name: 'MyApp',
-        children: [
-          WidgetEntry.leaf(
-            name: 'TinyClock',
-            type: WidgetAppearance.focused,
-          ),
-          WidgetEntry.single(
-            name: ' ',
-            child: WidgetEntry.multiple(
-              name: ' ',
-              children: [
-                WidgetEntry.leaf(
-                  name: ' ',
-                ),
-                WidgetEntry.leaf(
-                  name: 'This Page',
-                  type: WidgetAppearance.focusedAccent,
-                ),
-              ],
+        child: WidgetEntry.multiple(
+          name: 'Stack',
+          children: [
+            WidgetEntry.leaf(
+              name: 'TinyClock',
+              type: WidgetAppearance.focused,
             ),
-          ),
-        ],
+            WidgetEntry.single(
+              name: ' ',
+              child: WidgetEntry.multiple(
+                name: ' ',
+                children: [
+                  WidgetEntry.leaf(
+                    name: ' ',
+                  ),
+                  WidgetEntry.leaf(
+                    name: 'This Page',
+                    type: WidgetAppearance.focusedAccent,
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

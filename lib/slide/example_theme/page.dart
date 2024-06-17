@@ -54,7 +54,7 @@ class ExampleThemePage extends StatelessWidget {
                 ],
               ),
             ),
-            const Gap(32),
+            const Gap(64),
             const Flexible(
               flex: 2,
               child: SizedBox(

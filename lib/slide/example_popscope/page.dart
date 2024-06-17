@@ -26,7 +26,7 @@ class PopscopePage extends StatelessWidget {
                 child: _PopscopeGraph(),
               ),
             ),
-            const Gap(32),
+            const Gap(64),
             Flexible(
               flex: 3,
               child: PopScope(

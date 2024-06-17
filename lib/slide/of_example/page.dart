@@ -83,7 +83,7 @@ class _OfExamplePageState extends State<OfExamplePage> {
                       child: SingleChildScrollView(
                         child: Text.rich(
                           highlighter.highlight(_code),
-                          style: const TextStyle(fontSize: 18),
+                          style: const TextStyle(fontSize: 20),
                         ),
                       ),
                     ),

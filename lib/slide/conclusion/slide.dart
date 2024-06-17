@@ -47,6 +47,15 @@ class ConclusionSlide extends FlutterDeckSlideWidget {
                     ' Choose the most relevant one depending on our use cases.',
                   ],
                 ),
+                ListItem.rich(
+                  const [
+                    'Open',
+                    ' framework.dart',
+                    ' by hitting F12 on your IDE, and',
+                    ' get more insights',
+                    ' from the Flutter framework',
+                  ],
+                ),
               ].intersperse(const Gap(64)).toList(),
             ),
           ),

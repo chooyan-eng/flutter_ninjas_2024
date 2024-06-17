@@ -24,6 +24,7 @@ class SeeMorePage extends StatelessWidget {
                 description: 'Graph widget applies its theme using GraphTheme\n'
                     'found by GraphTheme.of(context)',
               ),
+              Gap(32),
               _Item(
                 url: 'https://github.com/chooyan-eng/flutter_ninjas_2024',
                 description:
